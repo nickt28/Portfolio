@@ -1,0 +1,2 @@
+# Portfolio
+I'm a dedicated front-end developer currently pursuing a degree in computer science. Over the course of my studies and personal projects, I've designed and developed a diverse range of user interfaces and systems. My technical proficiency is complemented by my passion for creating cutting-edge, meticulously detailed, and aesthetically pleasing interfaces that offer an intuitive and seamless user experience.

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"/>
+    <link href="../../style/fontawesome-6.3.0/css/fontawesome.css" rel="stylesheet">
+    <link href="../../style/fontawesome-6.3.0/css/solid.css" rel="stylesheet">
+  </head>
+  <body>
+    <a href="../index.html" class="back" aria-label="back"><i class="arrow left-arrow arrow-large"></i></a>
+    <section class="questions">
+      <div class="title">
+        <h2>To Do List</h2>
+      </div>
+      <div class="section-center">
+        <div class="adder">
+          <form onsubmit="event.preventDefault(); addNewItem();">
+            <input type="text" class="input" placeholder="Add items in your list"/>
+          </form>
+          <span id="add">+</span>
+        </div>
+        <article draggable="true" class="draggable question" data-drag="drag">
+          <div class="question-title">
+            <p>Example: Support all major credit cards?</p>
+            <button data-expand="" type="button" class="btn rotate" aria-label="Expand Card">
+              <i class="fa-solid fa-square-plus"></i>
+              <i class="fa-solid fa-square-minus" style="display: none;"></i>
+            </button>
+            <button data-delete="delete" type="button" class="btn shake" aria-label="Delete">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+          <div class="question-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+              dolore illo dolores quia nemo doloribus quaerat, magni numquam
+              repellat reprehenderit.
+            </p>
+          </div>
+        </article>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

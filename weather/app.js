@@ -22,12 +22,10 @@ function onPlaceChanged() {
 }
 
 const url = 'http://api.openweathermap.org'
-// const mapsAndPlacesApiKey = 'AIzaSyCllC58k5ap3vMqyKsmtKnnTPrBzdczJ2A'
-const openWeatherMapApiKey = '58598ecc7b95ec78992388426bbfc196'
 const msg = document.querySelector(".top-banner .msg");
 
 function getLocations(place) {
-  fetch(`${url}/geo/1.0/direct?q=${place}&limit=5&appid=${openWeatherMapApiKey}`, { method: 'get' })
+  fetch(`${url}/geo/1.0/direct?q=${place}&limit=5&appid=${OPEN_WEATHER_MAP_API_KEY}`, { method: 'get' })
   .then(response => response.json())
   .then(locations => {
     let responceNum = locations.length
@@ -53,7 +51,7 @@ function highlightCountry(country) {
 const grid = document.querySelector(".grid-weather");
 
 function getWeather(coordinates) {
-  fetch(`${url}/data/2.5/weather?lat=${coordinates[0]}&lon=${coordinates[1]}&appid=${openWeatherMapApiKey}&units=metric`)
+  fetch(`${url}/data/2.5/weather?lat=${coordinates[0]}&lon=${coordinates[1]}&appid=${OPEN_WEATHER_MAP_API_KEY}&units=metric`)
     .then(response => response.json())
     .then(data => {
       console.log(data)

@@ -1,3 +1,4 @@
+const votal = document.getElementById('votal')
 document.getElementById('project-card-votal').addEventListener('click', function () {
-    window.location.href = 'https://votal.org'
+    votal.scrollIntoView({ behavior: 'smooth' });
 })

@@ -40,7 +40,6 @@ html{
     background-color: #181e2b;
 }
 body{
-    height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
 }
@@ -71,9 +70,8 @@ body{
 .main{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 0px 30px;
-    height: 100%;
+    padding-top: 20%;
 }
 .content-intro{
     max-width: 900px;
@@ -85,7 +83,7 @@ body{
     font-size: 2rem;
     font-weight: unset;
 }
-.content-intro p{
+.content-intro > p{
     margin: 50px 0px 10px 0px;
     font-size: 1rem;
 }
@@ -104,4 +102,47 @@ body{
 }
 .project-cards img:active{
     transform: scale(1.02);
+}
+/* Votal Description Seciton */
+.project-description{
+    font-family: 'Poppins-EL';
+}
+.project-description-title {
+    margin-top: 200px;
+}
+.project-description-btn {
+    border: #ffffff 1px solid;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin: 12px 0px;
+    display: inline-block;
+}
+.project-description p {
+    font-size: 1rem;
+}
+.project-description-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.project-description-table thead {
+    background-color: #464953;
+}
+.project-description-table tbody {
+    background-color: #34363b99;
+}
+.project-description-table th, .project-description-table td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.project-description-docs{
+    text-align: left;
+}
+.pdf{
+    margin-bottom: 100px;
 }

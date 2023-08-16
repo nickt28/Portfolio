@@ -21,7 +21,7 @@ function onPlaceChanged() {
   }
 }
 
-const url = 'http://api.openweathermap.org'
+const url = 'https://api.openweathermap.org'
 const msg = document.querySelector(".top-banner .msg");
 
 function getLocations(place) {

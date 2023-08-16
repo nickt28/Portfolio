@@ -1,13 +1,5 @@
 :root{
-    --clr-white: #fff;
-    --clr-black: #222;
-    --spacing: 0.1rem;
-    --transition: all 0.3s linear;
-    --radius: 0.25rem;
-    --primary: #11998e;
-    --secondary: #38ef7d;
-    --white: #fff;
-    --gray: #9b9b9b;
+    --mountain: #0e0e0e;
 }
 *,
 ::after,
@@ -62,16 +54,16 @@ body{
 .mountain-svg span{
     height: 30px;
     display: block;
-    background-color: #0e0e0e;
+    background-color: var(--mountain);
 }
 .mountain-svg > svg > path{
-    fill: #0e0e0e;
+    fill: var(--mountain);
 }
 .main{
     display: flex;
     justify-content: center;
     margin: 0px 30px;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 .content-intro{
     max-width: 900px;

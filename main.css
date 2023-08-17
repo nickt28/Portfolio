@@ -58,6 +58,7 @@ body{
 }
 .project-cards{
     height: 150px;
+    margin-bottom: 600px;
     display: flex;
     column-gap: 20px;
 }
@@ -93,7 +94,7 @@ body{
 }
 .socials{
     display: inline-flex;
-    margin-top: 20px;
+    margin-bottom: 10px;
     column-gap: 10px;
 }
 .socials a {
@@ -108,9 +109,6 @@ body{
 /* Votal Description Seciton */
 .project-description{
     font-family: 'Poppins-EL';
-}
-.project-description-title {
-    margin-top: 200px;
 }
 .project-description-btn {
     border: #ffffff 1px solid;
@@ -128,7 +126,7 @@ body{
     border-collapse: collapse;
     width: 100%;
     font-size: 1.25rem;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     margin-top: 20px;
 }
 .project-description-table thead {
@@ -141,6 +139,15 @@ body{
     padding: 0.5em;
     text-align: left;
     border: 1px solid #ddd;
+}
+.project-description-table td:nth-child(1) {
+    font-size: 1.2rem;
+}
+.project-description-table td:nth-child(2) {
+    font-size: 0.8rem;
+}
+.project-description-table ul {
+    list-style-position: inside;
 }
 .project-description-docs{
     text-align: left;

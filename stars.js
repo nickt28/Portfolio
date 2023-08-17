@@ -33,7 +33,7 @@ function addStar() {
   let x = pageWidth * Math.random()
   let y = pageHeight * Math.random()
   let r = 3 * Math.random()
-  let speed = 0.8 * Math.random() // random speed between 1 and 4 pixels per frame
+  let speed = pageHeight/2000*(1+Math.random()*0.5)
   stars.push({ x, y, r, speed })
 }
 
@@ -46,9 +46,11 @@ function updateStars() {
 }
 
 function updateStar(star) {
+  // move the star up the canvas by the star's speed
   star.y -= star.speed
+  // if the star goes off the top of the canvas + the star's radius, reset it to the bottom
   if (star.y < -star.r) {
-    star.y = pageHeight + star.r
+    star.y = pageHeight
   }
 }
 

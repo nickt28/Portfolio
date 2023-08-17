@@ -33,7 +33,7 @@ function addStar() {
   let x = pageWidth * Math.random()
   let y = pageHeight * Math.random()
   let r = 3 * Math.random()
-  let speed = pageHeight/3000*(1+Math.random()*0.5)
+  let speed = pageHeight/10000*(1+Math.random())
   stars.push({ x, y, r, speed })
 }
 
@@ -55,9 +55,9 @@ function updateStar(star) {
 }
 
 function drawStars() {
-  ctx.fillStyle = "white"
+  ctx.fillStyle = "#ffffff21"
   ctx.shadowBlur = 10
-  ctx.shadowColor = "white"
+  ctx.shadowColor = "#ffffff21"
   ctx.beginPath()
   stars.forEach(star => {
     ctx.moveTo(star.x + star.r, star.y)

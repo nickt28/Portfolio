@@ -26,12 +26,8 @@ img{
     font-family: 'Poppins-EL';
     src: url(./font/poppins/Poppins-ExtraLight.ttf);
 }
-html{
-    background: #181e2b;
-    background: linear-gradient(180deg, #0f121a 0%, #232b3e 100%);
-    background-color: #181e2b;
-}
 body{
+    background-color: #121212;
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
 }
@@ -41,23 +37,6 @@ body{
     width: 100%;
     height: 100%;
     inset: 0;
-}
-.mountain-svg{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.mountain-svg svg {
-    vertical-align: bottom;
-}
-.mountain-svg span{
-    height: 30px;
-    display: block;
-    background-color: var(--mountain);
-}
-.mountain-svg > svg > path{
-    fill: var(--mountain);
 }
 .main{
     display: flex;
@@ -71,9 +50,7 @@ body{
     text-align: center;
 }
 .content-intro h1{
-    font-family: 'Poppins';
-    font-size: 2rem;
-    font-weight: unset;
+    font-size: 3rem;
 }
 .content-intro > p{
     margin: 50px 0px 10px 0px;
@@ -113,6 +90,20 @@ body{
 }
 .project-cards img:active{
     transform: scale(1.02);
+}
+.socials{
+    display: inline-flex;
+    margin-top: 20px;
+    column-gap: 10px;
+}
+.socials a {
+    text-decoration: none;
+}
+.socials svg{
+    height: 35px;
+}
+.socials svg path{
+    fill: white;
 }
 /* Votal Description Seciton */
 .project-description{

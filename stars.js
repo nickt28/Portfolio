@@ -40,21 +40,28 @@ function addStar() {
 // Draw the stars in stars array on the canvas
 function updateStars() {
   ctx.clearRect(0, 0, pageWidth, pageHeight)
-  for (let i = 0; i < stars.length; i++) {
-    let star = stars[i]
-    star.y -= star.speed
-    if (star.y < -star.r) {
-      // if star goes off the top of the screen, reset its position to the bottom
-      star.y = pageHeight + star.r
-    }
-    ctx.fillStyle = "white"
-    ctx.shadowBlur = 10
-    ctx.shadowColor = "white"
-    ctx.beginPath()
-    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2)
-    ctx.fill()
-  }
+  stars.forEach(updateStar)
+  drawStars()
   requestAnimationFrame(updateStars)
+}
+
+function updateStar(star) {
+  star.y -= star.speed
+  if (star.y < -star.r) {
+    star.y = pageHeight + star.r
+  }
+}
+
+function drawStars() {
+  ctx.fillStyle = "white"
+  ctx.shadowBlur = 10
+  ctx.shadowColor = "white"
+  ctx.beginPath()
+  stars.forEach(star => {
+    ctx.moveTo(star.x + star.r, star.y)
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2)
+  })
+  ctx.fill()
 }
 
 resizeCanvas()

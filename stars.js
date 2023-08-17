@@ -33,7 +33,7 @@ function addStar() {
   let x = pageWidth * Math.random()
   let y = pageHeight * Math.random()
   let r = 3 * Math.random()
-  let speed = pageHeight/2000*(1+Math.random()*0.5)
+  let speed = pageHeight/3000*(1+Math.random()*0.5)
   stars.push({ x, y, r, speed })
 }
 

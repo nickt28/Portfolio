@@ -40,8 +40,18 @@ function addStar() {
 // Draw the stars in stars array on the canvas
 function updateStars() {
   ctx.clearRect(0, 0, pageWidth, pageHeight)
+  
   stars.forEach(updateStar)
-  drawStars()
+  
+  ctx.fillStyle = "#ffffff21"
+  ctx.beginPath()
+  const endAngle = Math.PI * 2
+  stars.forEach(star => {
+    ctx.moveTo(star.x + star.r, star.y)
+    ctx.arc(star.x, star.y, star.r, 0, endAngle)
+  })
+  ctx.fill()
+
   requestAnimationFrame(updateStars)
 }
 
@@ -52,18 +62,6 @@ function updateStar(star) {
   if (star.y < -star.r) {
     star.y = pageHeight
   }
-}
-
-function drawStars() {
-  ctx.fillStyle = "#ffffff21"
-  ctx.shadowBlur = 10
-  ctx.shadowColor = "#ffffff21"
-  ctx.beginPath()
-  stars.forEach(star => {
-    ctx.moveTo(star.x + star.r, star.y)
-    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2)
-  })
-  ctx.fill()
 }
 
 resizeCanvas()

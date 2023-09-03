@@ -25,59 +25,47 @@ body{
     height: 100%;
     inset: 0;
 }
-.main{
-    display: flex;
-    justify-content: center;
-    margin: 0px 30px;
-    padding-top: 15%;
-}
-.content-intro{
+.content{
+    width: 90%;
     max-width: 900px;
+    margin: 0px auto;
     color: white;
     text-align: center;
 }
-.content-intro h1{
+.main{
+    padding-top: 15%;
+}
+.main h1{
     font-size: 3rem;
 }
-.content-intro > p{
+.main > p{
     margin: 50px 0px 10px 0px;
     font-size: 1rem;
 }
-.project-cards{
-    height: 150px;
-    margin-bottom: 600px;
+.projects{
+    padding-bottom: 90px;
+    max-width: 1000px;
+    margin: 0px auto;
+    width: 90%;
+}
+.projects1{
     display: flex;
-    column-gap: 20px;
+    justify-content: center;
+    column-gap: 15px;
+    margin-bottom: 10px;
 }
-@media screen and (max-width: 1024px) {
-    .project-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-        height: auto;
-    }
-    .project-cards img {
-        height: 160px;
-    }
-    .project-cards a:nth-child(3),
-    .project-cards > img:first-child {
-        margin-left: auto;
-    }
-    .project-cards a:nth-child(2),
-    .project-cards a:nth-child(4) {
-        margin-right: auto;
-    }
-}
-.project-cards img{
-    border-radius: 10px;
+.projects1 img{
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
 }
-.project-cards img:hover{
-    transform: scale(1.05);
+.projects1 > * {
+    flex: 1;
 }
-.project-cards img:active{
-    transform: scale(1.02);
+.projects1 > a > img {
+    height: 100%;
+}
+.projects2{
+    display: flex;
+    column-gap: 15px;
 }
 .socials{
     display: inline-flex;
@@ -94,7 +82,7 @@ body{
     fill: white;
 }
 /* Votal Description Seciton */
-.project-description p {
+.project-description {
     font-size: 0.9rem;
 }
 .project-description-btn {
@@ -103,7 +91,7 @@ body{
     color: white;
     border-radius: 5px;
     padding: 0px 10px;
-    margin: 12px 0px;
+    margin: 25px 0px;
     display: inline-block;
 }
 .project-description-table {
@@ -111,7 +99,6 @@ body{
     width: 100%;
     font-size: 1.25rem;
     margin-bottom: 100px;
-    margin-top: 20px;
 }
 .project-description-table thead {
     background-color: #464953;

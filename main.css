@@ -13,19 +13,6 @@ img{
     max-height: 100%;
     min-width: 0px; /* Edge browser bug fix for image min width equal to intrinsic width */
 }
-/* Font */
-@font-face {
-    font-family: 'Poppins';
-    src: url(./font/poppins/Poppins-Regular.ttf);
-}
-@font-face {
-    font-family: 'Poppins-L';
-    src: url(./font/poppins/Poppins-Light.ttf);
-}
-@font-face {
-    font-family: 'Poppins-EL';
-    src: url(./font/poppins/Poppins-ExtraLight.ttf);
-}
 body{
     background-color: #121212;
     font-family: 'Poppins', sans-serif;
@@ -107,8 +94,8 @@ body{
     fill: white;
 }
 /* Votal Description Seciton */
-.project-description{
-    font-family: 'Poppins-EL';
+.project-description p {
+    font-size: 0.9rem;
 }
 .project-description-btn {
     border: #ffffff 1px solid;
@@ -118,9 +105,6 @@ body{
     padding: 0px 10px;
     margin: 12px 0px;
     display: inline-block;
-}
-.project-description p {
-    font-size: 1rem;
 }
 .project-description-table {
     border-collapse: collapse;
@@ -151,6 +135,7 @@ body{
 }
 .project-description-docs{
     text-align: left;
+    font-weight: normal;
 }
 .pdf{
     margin-bottom: 100px;

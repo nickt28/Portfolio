@@ -84,8 +84,7 @@ function addNewItem(item) {
     articleNode.lastChild.lastChild.setAttribute('type','button')
     articleNode.lastChild.lastChild.setAttribute('class','btn shake')
     articleNode.lastChild.lastChild.setAttribute('aria-label','Delete')
-    articleNode.lastChild.lastChild.append(document.createElement("i"))
-    articleNode.lastChild.lastChild.lastChild.setAttribute('class','fa-solid fa-trash')
+    articleNode.lastChild.lastChild.insertAdjacentHTML('afterbegin', '<svg class="tool-svg"><use href="#trash"></use></svg>')
 
     items.append(articleNode)
     addNumber()

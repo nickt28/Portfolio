@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
     <link rel="icon" type="image/x-icon" href="../img/portfolio.ico">
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet"/>
-    <!-- Font Awesome -->
-    <link href="../../style/fontawesome-6.3.0/css/fontawesome.css" rel="stylesheet">
-    <link href="../../style/fontawesome-6.3.0/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1.0" />
   </head>
   <body>
+    <div aria-hidden="true" style="display: none;">
+		<svg id="plus" version="1.1" viewBox="0 0 416 416" xmlns="http://www.w3.org/2000/svg">
+			<path d="m240 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v144h-144c-17.7 0-32 14.3-32 32s14.3 32 32 32h144v144c0 17.7 14.3 32 32 32s32-14.3 32-32v-144h144c17.7 0 32-14.3 32-32s-14.3-32-32-32h-144v-144z"/>
+		</svg>
+		<svg id="square-plus" version="1.1" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
+			<path d="m64 0c-35.3 0-64 28.7-64 64v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64v-320c0-35.3-28.7-64-64-64h-320zm136 312v-64h-64c-13.3 0-24-10.7-24-24s10.7-24 24-24h64v-64c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24h-64v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/>
+		</svg>
+		<svg id="trash" version="1.1" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+			<path d="m135.2 17.7-7.2 14.3h-96c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32-14.3 32-32s-14.3-32-32-32h-96l-7.2-14.3c-5.4-10.9-16.5-17.7-28.6-17.7h-120.4c-12.1 0-23.2 6.8-28.6 17.7zm280.8 110.3h-384l21.2 339c1.6 25.3 22.6 45 47.9 45h245.8c25.3 0 46.3-19.7 47.9-45l21.2-339z"/>
+		</svg>
+    </div>
     <a href="../" class="back" aria-label="back"><i class="arrow left-arrow arrow-large"></i></a>
     <section class="questions">
       <div class="title">
@@ -23,20 +26,19 @@
       </div>
       <div class="section-center">
         <div class="adder">
-          <form onsubmit="event.preventDefault(); addNewItem();">
-            <input type="text" class="input" placeholder="Add items in your list"/>
-          </form>
-          <span id="add">+</span>
+			<form onsubmit="event.preventDefault(); addNewItem();">
+				<input type="text" class="input" placeholder="Add items in your list"/>
+			</form>
+		    <svg id="add" class="plus-svg"><use href="#plus"></use></svg>
         </div>
         <article draggable="true" class="draggable question" data-drag="drag">
           <div class="question-title">
             <p>Example: Support all major credit cards?</p>
             <button data-expand="" type="button" class="btn rotate" aria-label="Expand Card">
-              <i class="fa-solid fa-square-plus"></i>
-              <i class="fa-solid fa-square-minus" style="display: none;"></i>
+				<svg class="tool-svg"><use href="#square-plus"></use></svg>
             </button>
             <button data-delete="delete" type="button" class="btn shake" aria-label="Delete">
-              <i class="fa-solid fa-trash"></i>
+				<svg class="tool-svg"><use href="#trash"></use></svg>
             </button>
           </div>
           <div class="question-text">
@@ -48,6 +50,6 @@
           </div>
         </article>
     </section>
-    <script src="app.js"></script>
+    <script src="app.js?v=1.0"></script>
   </body>
 </html>

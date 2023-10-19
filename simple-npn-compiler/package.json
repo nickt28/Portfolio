@@ -1,0 +1,23 @@
+{
+  "name": "simple-npn-compiler",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "minify-html": "html-minifier-terser --input-dir src --output-dir dist --file-ext html --collapse-whitespace --remove-comments",
+    "optimize-css": "postcss src/*.css --use cssnano --dir dist --no-map",
+    "minify-js": "uglifyjs src/user_authentication.js --compress --mangle -o dist/user_authentication.js",
+    "copy-img": "copyfiles -u 1 src/images/**/* dist",
+    "build": "npm run minify-html && npm run optimize-css && npm run minify-js && npm run copy-img"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cssnano": "^6.0.1",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
+    "uglify-js": "^3.17.4"
+  }
+}

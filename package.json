@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.10.3"
+  },
+  "engines": {
+    "node": "20.9.0",
+    "npm": "10.1.0"
   }
 }

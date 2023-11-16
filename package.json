@@ -2,9 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "nicholas tomkins",
-  "main": "main.js",
+  "source": "src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel",
+    "build": "parcel build"
   },
   "author": "",
   "license": "ISC",

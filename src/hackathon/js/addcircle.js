@@ -1,16 +1,11 @@
-const titleInput = document.getElementById("iTitle");
-const progressInput = document.getElementById("iProgress");
-const addButton = document.getElementById("addBucket");
-const allBuckets = document.getElementById("allBuckets");
-let circles = 10
+let circles = 0
 
-addButton.addEventListener("click", () => {
-    // Get values
-    const title = titleInput.value;
-    const progress = progressInput.value;
+document.getElementById("addBucket").addEventListener("click", () => {
+    const title = document.getElementById("iTitle")
+    const progress = document.getElementById("iProgress")
+    let number = parseInt(progress.value)
 
-    if (title != "" && progress != "") {
-        let number = parseInt(progress)
+    if (title.value != '' && progress.value != '') {
         if (Number.isInteger(number)) {
             if (number > 100) { number = 100 }
         } else {
@@ -18,18 +13,18 @@ addButton.addEventListener("click", () => {
         }
 
         // Creat container
-        allBuckets.insertAdjacentHTML('beforeend', `
+        document.getElementById("allBuckets").insertAdjacentHTML('beforeend', `
                 <div class="col-md-3 col-sm-6">
                     <div class="box">
-                    <div class="circle" id="circles-${circles}"></div>
-                    <h6>${title}</h6>
+                    <div class="circle" id="cir-${circles}"></div>
+                    <h6>${title.value}</h6>
                     </div>
                 </div>`)
 
         // Inictliase circle
-        if (title != "") {
-            var myCircle = Circles.create({
-            id: "circles-" + circles,
+        if (title.value != "") {
+            Circles.create({
+            id: "cir-" + circles,
             radius: 65,
             value: number,
             maxValue: 100,
@@ -52,6 +47,10 @@ addButton.addEventListener("click", () => {
 
             // Close modal
             $('#exampleModalCenter').modal('hide')
+
+            // Reset modal
+            title.value = ''
+            progress.value = ''
         }
     }
 })

@@ -51,46 +51,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            function makeCircle(){
-                var myCircle = Circles.create({
-                    id: "i-circles-1",
-                    radius: 65,
-                    value: 7301,
-                    maxValue: 7301,
-                    width: 5,
-                    text: function (value) {
-                        return value + "";
-                    },
-                    colors: ["transparent", "#22b81f"],
-                    duration: 400,
-                    wrpClass: "circles-wrp",
-                    textClass: "progress_text",
-                    valueStrokeClass: "circles-valueStroke",
-                    maxValueStrokeClass: "circles-maxValueStroke",
-                    styleWrapper: true,
-                    styleText: true
-                });
-                var myCircle = Circles.create({
-                    id: "i-circles-2",
-                    radius: 65,
-                    value: 0.002,
-                    maxValue: 0.002,
-                    width: 5,
-                    text: function (value) {
-                        return value + ".002";
-                    },
-                    colors: ["transparent", "#22b81f"],
-                    duration: 400,
-                    wrpClass: "circles-wrp",
-                    textClass: "progress_text",
-                    valueStrokeClass: "circles-valueStroke",
-                    maxValueStrokeClass: "circles-maxValueStroke",
-                    styleWrapper: true,
-                    styleText: true
-                });
-            }
-        </script>
+
         <!-- Circles end -->
         <div class="mx-auto mb-4">
             <div class='tableauPlaceholder' id='viz1692495356027' style='position: relative'>
@@ -321,7 +282,42 @@
 
     <script src="js/circles.js"></script>
     <script>
-        makeCircle()
+        var myCircle = Circles.create({
+            id: "i-circles-1",
+            radius: 65,
+            value: 7301,
+            maxValue: 7301,
+            width: 5,
+            text: function (value) {
+                return value + "";
+            },
+            colors: ["transparent", "#22b81f"],
+            duration: 400,
+            wrpClass: "circles-wrp",
+            textClass: "progress_text",
+            valueStrokeClass: "circles-valueStroke",
+            maxValueStrokeClass: "circles-maxValueStroke",
+            styleWrapper: true,
+            styleText: true
+        });
+        var myCircle = Circles.create({
+            id: "i-circles-2",
+            radius: 65,
+            value: 0.002,
+            maxValue: 0.002,
+            width: 5,
+            text: function (value) {
+                return value + ".002";
+            },
+            colors: ["transparent", "#22b81f"],
+            duration: 400,
+            wrpClass: "circles-wrp",
+            textClass: "progress_text",
+            valueStrokeClass: "circles-valueStroke",
+            maxValueStrokeClass: "circles-maxValueStroke",
+            styleWrapper: true,
+            styleText: true
+        });
     </script>
 </body>
 </html>

@@ -52,57 +52,6 @@
             </div>
         </div>
     </div>
-    <script>
-        function makeCircle(){
-            var myCircle = Circles.create({
-                id: "b-circles-1",
-                radius: 65,
-                value: 6829,
-                maxValue: 6829,
-                width: 5,
-                text: function (value) {
-                    return value + "";
-                },
-                colors: ["transparent", "#22b81f"],
-                duration: 400,
-                wrpClass: "circles-wrp",
-                textClass: "progress_text",
-                valueStrokeClass: "circles-valueStroke",
-                maxValueStrokeClass: "circles-maxValueStroke",
-                styleWrapper: true,
-                styleText: true
-            });
-            var myCircle = Circles.create({
-                id: "b-circles-2",
-                radius: 65,
-                value: 9428,
-                maxValue: 9428,
-                width: 5,
-                text: function (value) {
-                    return value + "";
-                },
-                colors: ["transparent", "#22b81f"],
-                duration: 400,
-                wrpClass: "circles-wrp",
-                textClass: "progress_text",
-                valueStrokeClass: "circles-valueStroke",
-                maxValueStrokeClass: "circles-maxValueStroke",
-                styleWrapper: true,
-                styleText: true
-            });
-        }
-    </script>
-    <!-- Circles end -->
-
-
-    <!-- <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-        <h1 class="display-5 mb-4 fw-bold">CITIC PACIFIC MINING MANAGEMENT PTY LTD</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-3">[11:49 AM] 1,241,637 t CO2e -  Total Emissions</p>
-          <p class="lead mb-3">[11:50 AM] 22,867,778 - Net energy consumed GJ</p>
-        </div>
-    </div> -->
 
     <!-- Business EU  -->
     <section id="Beu">
@@ -180,7 +129,7 @@
             </div>
     </section>
 
-    <!-- C A L L  T O  A C T I O N -->
+    <!-- call to action -->
     <section id="call-to-action">
         <div class="container text-center">
             <h2>Up your Game!</h2>
@@ -192,8 +141,6 @@
             </div>
         </div>
     </section>
-
-    <!-- end info_section -->
 
     <!-- footer section -->
     <footer>
@@ -256,7 +203,42 @@
 
     <script src="js/circles.js"></script>
     <script>
-        makeCircle()
+        var myCircle = Circles.create({
+            id: "b-circles-1",
+            radius: 65,
+            value: 6829,
+            maxValue: 6829,
+            width: 5,
+            text: function (value) {
+                return value + "";
+            },
+            colors: ["transparent", "#22b81f"],
+            duration: 400,
+            wrpClass: "circles-wrp",
+            textClass: "progress_text",
+            valueStrokeClass: "circles-valueStroke",
+            maxValueStrokeClass: "circles-maxValueStroke",
+            styleWrapper: true,
+            styleText: true
+        });
+        var myCircle = Circles.create({
+            id: "b-circles-2",
+            radius: 65,
+            value: 9428,
+            maxValue: 9428,
+            width: 5,
+            text: function (value) {
+                return value + "";
+            },
+            colors: ["transparent", "#22b81f"],
+            duration: 400,
+            wrpClass: "circles-wrp",
+            textClass: "progress_text",
+            valueStrokeClass: "circles-valueStroke",
+            maxValueStrokeClass: "circles-maxValueStroke",
+            styleWrapper: true,
+            styleText: true
+        });
     </script>
 </body>
 </html>

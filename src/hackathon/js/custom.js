@@ -88,4 +88,3 @@ var myCircle = Circles.create({
     styleWrapper: true,
     styleText: true
 });
-

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://parceljs.org/" target="_blank">
-    <img alt="Nick T" src="https://i.ibb.co/TgmTm2D/RM-title.png" width="749">
+    <img alt="Nick T" src="https://nicktomkins.com/host/RM_title.png" width="749">
   </a>
 </p>
 
@@ -9,12 +9,12 @@
 <h3 align="center">A passionate frontend developer from Melbourne</h3>
 
 - 🌱 I’m currently learning **Next.js, Vue.js, SvelteKit**
-- 👯 I’m looking to collaborate on [blogging systems](https://github.com/topics/blogging-system)
-- 🔭 I’m currently working on [freelancing](https://www.upwork.com/freelancers/nicksdesign)
-- 🤝 I'm looking for help with [votal](https://votal.org/)
-- 👨‍💻 All of my projects are available at [https://nicktomkins.com/](https://nicktomkins.com/)
+- 👯 I’m looking to collaborate on [Blogging Systems](https://github.com/topics/blogging-system)
+- 🔭 I’m currently working on [UpWork](https://www.upwork.com/freelancers/nicksdesign)
+- 🤝 I'm looking for help with [Votal](https://votal.org/)
+- 👨‍💻 All of my projects are available [here].(https://nicktomkins.com/)
 - 💬 Ask me anything about **computer science**
-- 📄 Know about my experiences [linkedin.com/in/mrnicktomkins/](linkedin.com/in/mrnicktomkins/)
+- 📄 Know about my experiences on [LinkedIn](linkedin.com/in/mrnicktomkins/)
 
 - ⚡ Fun fact **I enjoy coffee, the more I drink the faster I work.**
 

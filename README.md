@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://parceljs.org/" target="_blank">
+  <a href="https://nicktomkins.com/">
     <img alt="Nick T" src="https://nicktomkins.com/host/RM_title.png" width="749">
   </a>
 </p>
@@ -12,7 +12,7 @@
 - 👯 I’m looking to collaborate on [Blogging Systems](https://github.com/topics/blogging-system)
 - 🔭 I’m currently working on [UpWork](https://www.upwork.com/freelancers/nicksdesign)
 - 🤝 I'm looking for help with [Votal](https://votal.org/)
-- 👨‍💻 All of my projects are available [here].(https://nicktomkins.com/)
+- 👨‍💻 All of my projects are available [here](https://nicktomkins.com/)
 - 💬 Ask me anything about **computer science**
 - 📄 Know about my experiences on [LinkedIn](linkedin.com/in/mrnicktomkins/)
 

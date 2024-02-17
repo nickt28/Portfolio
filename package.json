@@ -4,10 +4,10 @@
   "description": "Personal Software Portfolio",
   "private": true,
   "license": "UNLICENSED",
-  "source": "src/index.html",
+  "source": ["src/index.html", "src/hackathon/index.html", "src/tic-tac-toe/index.html", "src/to-do-list/index.html"],
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build && copyfiles -u 1 static/host/* dist"
+    "build": "parcel build && copyfiles -u 1 static/host/* dist && copyfiles robots.txt sitemap.xml dist"
   },
   "author": "Nicholas Tomkins",
   "devDependencies": {

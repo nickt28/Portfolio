@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://nicktomkins.com/sitemap.xml

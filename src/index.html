@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; style-src-elem 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
 	<title>Nick's Tomkins Portfolio</title>
 	<meta name="description" content="Passionate web designer and frontend developer with expertise in React, Express, and Node.js">
 	<meta name="keywords" content="web design, frontend development, React, Express, Node.js">
@@ -10,118 +11,116 @@
 	<link rel="icon" type="image/x-icon" href="/static/portfolio.ico">
 </head>
 <body>
-	<canvas class="bg-neutral-900 -z-10 fixed w-full h-full" id="canvas1"></canvas>
-	<div>
-		<main class="m-auto w-11/12 max-w-4xl pt-20 md:pt-32 text-white text-center pt-1/6">
-			<h1 class="text-5xl font-medium">Hi 👋<br>I'm Nick Tomkins</h1>
-			<p class="my-12">As a self-motivated developer, I have gained expertise in full-stack development through coding challenges, hackathons, and open source contributions. In this portfolio, I selected projects that showcase my capabilities in full-stack development and my ability to work within team environments.</p>
-			<p>Projects and Links</p>
-			<div class="flex justify-center mt-2.5 mb-4 gap-x-2.5">
-				<a href="https://www.linkedin.com/in/mrnicktomkins/" aria-label="Linkedin profile">
-					<img src="/static/icons/linkedin.svg" alt="Linkedin">
-				</a>
-				<a href="https://github.com/nickt28/Portfolio" aria-label="Github profile">
-					<img src="/static/icons/github.svg" alt="Github">
-				</a>
-				<a href="https://learn.microsoft.com/en-us/users/nickt0/" aria-label="Azure profile">
-					<img src="/static/icons/azure.svg" alt="Azure">
-				</a>
+	<div class="bg-neutral-900 -z-10 fixed inset-0" id="background"></div>
+	<main class="m-auto w-11/12 max-w-4xl pt-20 md:pt-32 text-white text-center pt-1/6">
+		<h1 class="text-5xl font-medium">Hi 👋<br>I'm Nick Tomkins</h1>
+		<p class="my-12">As a self-motivated developer, I have gained expertise in full-stack development through coding challenges, hackathons, and open source contributions. In this portfolio, I selected projects that showcase my capabilities in full-stack development and my ability to work within team environments.</p>
+		<p>Projects and Links</p>
+		<div class="flex justify-center mt-2.5 mb-4 gap-x-2.5">
+			<a href="https://www.linkedin.com/in/mrnicktomkins/" aria-label="Linkedin profile">
+				<img src="/static/icons/linkedin.svg" alt="Linkedin">
+			</a>
+			<a href="https://github.com/nickt28/Portfolio" aria-label="Github profile">
+				<img src="/static/icons/github.svg" alt="Github">
+			</a>
+			<a href="https://learn.microsoft.com/en-us/users/nickt0/" aria-label="Azure profile">
+				<img src="/static/icons/azure.svg" alt="Azure">
+			</a>
+		</div>
+	</main>
+	<section class="m-auto pb-24 max-w-5xl m-0 w-11/12">
+			<div class="justify-center gap-x-3 flex mb-2.5">
+					<img class="max-w-full max-h-full min-w-0 cursor-pointer" width="650" id="project-card-votal" src="/static/votal.webp" alt="Votal">
+					<a href="hackathon/household_info.html">
+						<img class="max-w-full max-h-full min-w-0" width="650" src="/static/hackathon.webp" alt="Hackathon">
+					</a>
 			</div>
-		</main>
-		<section class="m-auto pb-24 max-w-5xl m-0 w-11/12">
-				<div class="justify-center gap-x-3 flex mb-2.5">
-						<img class="max-w-full max-h-full min-w-0 cursor-pointer" width="650" id="project-card-votal" src="/static/votal.webp" alt="Votal">
-						<a href="hackathon/household_info.html">
-							<img class="max-w-full max-h-full min-w-0" width="650" src="/static/hackathon.webp" alt="Hackathon">
-						</a>
-				</div>
-				<div class="gap-x-3 flex">
-						<a href="https://privazer.pages.dev">
-							<img class="max-w-full max-h-full min-w-0" width="400" src="/static/privazer.webp" alt="PrivaZer">
-						</a>
-						<a href="tic-tac-toe/">
-							<img class="max-w-full max-h-full min-w-0" width="245" src="/static/tic_tac_toe.webp" alt="Tic Tac Toe">
-						</a>
-						<a href="to-do-list/">
-							<img class="max-w-full max-h-full min-w-0" width="330" src="/static/to_do_list.webp" alt="To Do List">
-						</a>
-				</div>
-		</section>
-		<section class="m-auto w-11/12 max-w-4xl text-white text-center">
-			<h2 class="text-4xl mb-3 font-medium" id="votal">Building Votal: Crafting an Ecosystem for Business Surveys</h2>
-			<p>Votal is my most advanced and developed project. Over a span of many months, I built an extensive ecosystem designed to cater to all business survey requirements.</p>
-			<a class="inline-block rounded bg-white hover:bg-slate-100 active:bg-slate-200 text-black text-xl m-5 px-4 py-2" draggable="false" href="https://votal.org">View Project</a>
-			<table class="w-full text-xl mb-24 border-collapse">
-				<thead class="bg-slate-600">
-					<tr>
-						<th class="border p-2 border-solid border-zinc-300 p-2.5">Important Feature</th>
-						<th class="border p-2 border-solid border-zinc-300 p-2.5">Description</th>
-					</tr>
-				</thead>
-				<tbody class="bg-neutral-800/50 text-sm text-left">
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Survey Creation and Question Types</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Create surveys with three question types: radio, checkbox, and text field questions.</li>
-								<li class="list-inside list-disc">Include an "Other" field for each question type to gather diverse responses.</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Comprehensive Dashboard</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Access a comprehensive dashboard displaying all your surveys.</li>
-								<li class="list-inside list-disc">Get an overview of views and responses for each survey.</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Secure Account Support</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Utilise secure account features to safeguard and manage your surveys.</li>
-								<li class="list-inside list-disc">Choose between a username or email for account identification.</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Efficient Single-Page Routing</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Enjoy seamless single-page application routing for enhanced user experience.</li>
-								<li class="list-inside list-disc">Bookmark surveys and navigate using browser back buttons effortlessly.</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Survey Management Page</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Manage your surveys effortlessly from a centralised page.</li>
-								<li class="list-inside list-disc">Copy survey links with ease, and generate QR codes for easy sharing.</li>
-								<li class="list-inside list-disc">Delete unwanted surveys and access results functions for insights.</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Interactive Survey Results</td>
-						<td class="border p-2 border-solid border-zinc-300 p-2.5">
-							<ul>
-								<li class="list-inside list-disc">Access dynamic survey results presented through an intuitive pie chart graph.</li>
-								<li class="list-inside list-disc">Visualise data trends and responses for improved insights.</li>
-							</ul>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<h2 class="text-4xl mb-1.5 text-left font-medium">Project documentation</h2>
-			<object class="w-full mb-24" data="/static/votal.pdf" type="application/pdf" onload="this.style.height='800px';">
-				<p>Unable to display PDF file. <a class="underline text-blue-500 active:text-indigo-500" href="/static/votal.pdf">Open here</a></p>
-			</object>
-		</section>
-	</div>
+			<div class="gap-x-3 flex">
+					<a href="https://privazer.pages.dev">
+						<img class="max-w-full max-h-full min-w-0" width="400" src="/static/privazer.webp" alt="PrivaZer">
+					</a>
+					<a href="tic-tac-toe/">
+						<img class="max-w-full max-h-full min-w-0" width="245" src="/static/tic_tac_toe.webp" alt="Tic Tac Toe">
+					</a>
+					<a href="to-do-list/">
+						<img class="max-w-full max-h-full min-w-0" width="330" src="/static/to_do_list.webp" alt="To Do List">
+					</a>
+			</div>
+	</section>
+	<section class="m-auto w-11/12 max-w-4xl text-white text-center">
+		<h2 class="text-4xl mb-3 font-medium" id="votal">Building Votal: Crafting an Ecosystem for Business Surveys</h2>
+		<p>Votal is my most advanced and developed project. Over a span of many months, I built an extensive ecosystem designed to cater to all business survey requirements.</p>
+		<a class="inline-block rounded bg-white hover:bg-slate-100 active:bg-slate-200 text-black text-xl m-5 px-4 py-2" draggable="false" href="https://votal.org">View Project</a>
+		<table class="w-full text-xl mb-24 border-collapse">
+			<thead class="bg-slate-600">
+				<tr>
+					<th class="border p-2 border-solid border-zinc-300 p-2.5">Important Feature</th>
+					<th class="border p-2 border-solid border-zinc-300 p-2.5">Description</th>
+				</tr>
+			</thead>
+			<tbody class="bg-neutral-800/50 text-sm text-left">
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Survey Creation and Question Types</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Create surveys with three question types: radio, checkbox, and text field questions.</li>
+							<li class="list-inside list-disc">Include an "Other" field for each question type to gather diverse responses.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Comprehensive Dashboard</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Access a comprehensive dashboard displaying all your surveys.</li>
+							<li class="list-inside list-disc">Get an overview of views and responses for each survey.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Secure Account Support</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Utilise secure account features to safeguard and manage your surveys.</li>
+							<li class="list-inside list-disc">Choose between a username or email for account identification.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Efficient Single-Page Routing</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Enjoy seamless single-page application routing for enhanced user experience.</li>
+							<li class="list-inside list-disc">Bookmark surveys and navigate using browser back buttons effortlessly.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Survey Management Page</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Manage your surveys effortlessly from a centralised page.</li>
+							<li class="list-inside list-disc">Copy survey links with ease, and generate QR codes for easy sharing.</li>
+							<li class="list-inside list-disc">Delete unwanted surveys and access results functions for insights.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="text-xl text-center border p-2 border-solid border-zinc-300 p-2.5">Interactive Survey Results</td>
+					<td class="border p-2 border-solid border-zinc-300 p-2.5">
+						<ul>
+							<li class="list-inside list-disc">Access dynamic survey results presented through an intuitive pie chart graph.</li>
+							<li class="list-inside list-disc">Visualise data trends and responses for improved insights.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 class="text-4xl mb-1.5 text-left font-medium">Project documentation</h2>
+		<object id="pdf" class="w-full mb-24" data="/static/votal.pdf" type="application/pdf">
+			<p>Unable to display PDF file. <a class="underline text-blue-500 active:text-indigo-500" href="/static/votal.pdf">Open here</a></p>
+		</object>
+	</section>
 	<footer>
 		<script src="main.js" defer></script>
 	</footer>

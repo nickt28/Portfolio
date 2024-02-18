@@ -4,13 +4,20 @@
   "description": "Personal Software Portfolio",
   "private": true,
   "license": "UNLICENSED",
-  "source": ["src/index.html", "src/hackathon/index.html", "src/tic-tac-toe/index.html", "src/to-do-list/index.html"],
+  "source": [
+    "src/index.html",
+    "src/hackathon/index.html",
+    "src/tic-tac-toe/index.html",
+    "src/to-do-list/index.html"
+  ],
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build && copyfiles -u 1 static/host/* dist && copyfiles robots.txt sitemap.xml dist"
+    "build": "parcel build && copyfiles -u 1 static/host/* dist && copyfiles robots.txt sitemap.xml dist",
+    "report": "parcel build --reporter @parcel/reporter-bundle-analyzer"
   },
   "author": "Nicholas Tomkins",
   "devDependencies": {
+    "@parcel/reporter-bundle-analyzer": "^2.11.0",
     "copyfiles": "^2.4.1",
     "parcel": "^2.10.3",
     "postcss": "^8.4.35",

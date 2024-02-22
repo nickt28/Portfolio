@@ -11,26 +11,26 @@ document.getElementById('project-card-votal').addEventListener('click', function
 
 class DarkMode {
   constructor() {
-    this.darkMode = localStorage.getItem('darkMode');
+    this.darkMode = localStorage.getItem('theme');
     this.observer = [];
 
     // Check if the user has set a preference for dark mode
     if (this.darkMode === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       this.darkMode = 'true';
-      localStorage.setItem('darkMode', this.darkMode);
+      localStorage.setItem('theme', this.darkMode);
     }
   }
 
-  toggleDarkModeClass(docClassList) {
+  toggleDarkModeClass() {
     if (this.isDark() === 'true') {
-      docClassList.add('dark');
+      document.documentElement.classList.add('dark')
     } else {
-      docClassList.remove('dark');
+      document.documentElement.classList.remove('dark')
     }
   }
 
-  setupToggle(checkbox, docClassList) {
-    checkbox.addEventListener('change', () => {
+  setupToggle(cb) {
+    cb.addEventListener('change', () => {
       this.toggle();
     });
   }
@@ -45,7 +45,7 @@ class DarkMode {
 
   toggle() {
     this.darkMode = this.darkMode === 'true' ? 'false' : 'true';
-    localStorage.setItem('darkMode', this.darkMode);
+    localStorage.setItem('theme', this.darkMode);
     this.notifyObservers();
   }
 
@@ -55,21 +55,19 @@ class DarkMode {
 }
 
 // Dark mode setup
-const docClassList = document.documentElement.classList
 const checkbox = document.getElementById('switch');
-
 const darkMode = new DarkMode();
-darkMode.setupToggle(checkbox, docClassList);
+darkMode.setupToggle(checkbox);
 
 // Apply dark mode if it's enabled
 if (darkMode.isDark() === 'true') {
-  darkMode.toggleDarkModeClass(docClassList)
+  darkMode.toggleDarkModeClass()
   checkbox.checked = true;
 }
 
 // Add background-color observer
 darkMode.addObserver(() => {
-  darkMode.toggleDarkModeClass(docClassList);
+  darkMode.toggleDarkModeClass();
 });
 
 // Create a new canvas element

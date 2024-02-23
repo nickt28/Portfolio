@@ -152,3 +152,44 @@ function updateStars() {
 resizeCanvas()
 initiateStars()
 updateStars()
+
+// Fade in effect
+const elements = document.querySelectorAll('[data-fade-in]');
+
+// Intersection Observer options
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+// Function to run the animation
+const runAnimation = (element) => {
+  element.classList.remove('opacity-0');
+  const fadeDirection = element.getAttribute('data-fade-in');
+  const directionClassMap = {
+    'left': '-translate-x-2/4',
+    'right': 'translate-x-2/4',
+    'bottom': 'translate-y-2/4'
+  };
+
+  element.classList.remove('opacity-0', directionClassMap[fadeDirection]);
+};
+
+// Intersection Observer callback
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    runAnimation(entry.target);
+    observer.unobserve(entry.target);
+  });
+};
+
+// Delay Intersection Observer so images are loaded
+window.onload = function() {
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+};

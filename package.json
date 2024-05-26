@@ -1,26 +1,49 @@
 {
-  "name": "nt-portfolio",
-  "version": "1.0.4",
-  "description": "Personal Software Portfolio",
-  "private": true,
-  "license": "UNLICENSED",
-  "source": [
-    "src/index.html",
-    "src/hackathon/index.html",
-    "src/tic-tac-toe/index.html",
-    "src/to-do-list/index.html"
-  ],
-  "scripts": {
-    "dev": "parcel",
-    "build": "parcel build && copyfiles -u 1 static/host/* dist && copyfiles robots.txt sitemap.xml dist",
-    "report": "parcel build --reporter @parcel/reporter-bundle-analyzer"
-  },
-  "author": "Nicholas Tomkins",
-  "devDependencies": {
-    "@parcel/reporter-bundle-analyzer": "^2.11.0",
-    "copyfiles": "^2.4.1",
-    "parcel": "^2.10.3",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
-  }
+	"name": "portfolio",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@cloudflare/wrangler": "^1.16.0",
+		"@iconify-json/carbon": "^1.1.34",
+		"@sveltejs/adapter-auto": "3.2.1",
+		"@sveltejs/adapter-cloudflare": "^4.4.0",
+		"@sveltejs/adapter-static": "3.0.1",
+		"@sveltejs/kit": "^2.5.10",
+		"@types/dompurify": "^3.0.5",
+		"@types/marked": "^5.0.2",
+		"@types/prismjs": "^1.26.4",
+		"@unocss/core": "^0.60.3",
+		"@unocss/extractor-svelte": "^0.60.3",
+		"@unocss/preset-icons": "^0.60.3",
+		"@unocss/svelte-scoped": "^0.60.3",
+		"dompurify": "^3.1.4",
+		"marked": "^12.0.2",
+		"marked-gfm-heading-id": "^3.1.3",
+		"marked-mangle": "^1.1.7",
+		"npm-check-updates": "^16.14.20",
+		"prettier": "^3.2.5",
+		"prettier-plugin-svelte": "^3.2.3",
+		"prismjs": "^1.29.0",
+		"sass": "^1.77.2",
+		"slugify": "^1.6.6",
+		"svelte": "4.2.17",
+		"svelte-check": "3.7.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.5",
+		"unocss": "^0.60.3",
+		"vite": "^5.2.11"
+	},
+	"type": "module",
+	"dependencies": {
+		"dayjs": "^1.11.11"
+	}
 }

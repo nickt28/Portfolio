@@ -12,14 +12,11 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@cloudflare/wrangler": "^1.16.0",
 		"@iconify-json/carbon": "^1.1.34",
 		"@sveltejs/adapter-auto": "3.2.1",
 		"@sveltejs/adapter-cloudflare": "^4.4.0",
-		"@sveltejs/adapter-static": "3.0.1",
 		"@sveltejs/kit": "^2.5.10",
 		"@types/dompurify": "^3.0.5",
-		"@types/marked": "^5.0.2",
 		"@types/prismjs": "^1.26.4",
 		"@unocss/core": "^0.60.3",
 		"@unocss/extractor-svelte": "^0.60.3",

@@ -7,6 +7,7 @@
 <hr>
 <h1 align="center">Hi 👋 I'm Nicholas Tomkins</h1>
 <h3 align="center">A fullstack developer in Melbourne</h3>
+
 - 🤖 Built an AI system - feel free to ask me about it!
 - 💬 Ask me anything about **Computer Science**
 - 📄 Know about my experiences on [LinkedIn](https://linkedin.com)

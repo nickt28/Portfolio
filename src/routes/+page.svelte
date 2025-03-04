@@ -30,14 +30,11 @@
 		</p>
 		<div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2">
 			{#each links as link}
-				<a class="decoration-none"
-					href={`${isEmail(link.link) ? 'mailto:' : ''}${link.link}`}
-					target={link.link === '/' ? '_self' : '_blank'}
-					rel="noreferrer"
-				>
-					<!-- Removed 'var(--accent-text)' -->
-					<Icon icon={getPlatfromIcon(link.platform)} color={link.color} size={'20px'} />
-				</a>
+				{#if link.show}
+					<a class="decoration-none" href={`${isEmail(link.link) ? 'mailto:' : ''}${link.link}`} target={link.link === '/' ? '_self' : '_blank'}>
+						<Icon icon={getPlatfromIcon(link.platform)} color={link.color} size={'20px'} />
+					</a>
+				{/if}
 			{/each}
 		</div>
 	</div>

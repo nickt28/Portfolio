@@ -10,7 +10,7 @@ const config: UserConfig = {
 		sveltekit()
 	],
 	server: {
-		port: 3002,
+		// port: 3002,
 	},
 };
 
